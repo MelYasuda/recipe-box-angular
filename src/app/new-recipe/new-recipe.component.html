@@ -1,0 +1,22 @@
+<h1>New Recipe</h1>
+<div>
+ <label>Enter Recipe Name:</label>
+ <input #newName>
+</div>
+<div>
+ <label>Enter Ingredients:</label>
+ <input #newIngredients>
+</div>
+<div>
+ <label>Enter Directions:</label>
+ <input #newDirections>
+</div>
+<div>
+  <label>Recipe Deliciousness:</label>
+  <select #newDeliciousness>
+    <option [value]="1"> Disgusting </option>
+    <option [value]="2"> Neutral </option>
+    <option [value]="3"> Delicious </option>
+  </select>
+  <button (click)="submitForm(newName.value, newIngredients.value, newDirections.value, newDeliciousness.value)">Add</button>
+</div>
