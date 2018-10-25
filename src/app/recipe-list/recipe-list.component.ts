@@ -26,6 +26,16 @@ export class RecipeListComponent{
     }
   }
 
+  filterByCoocked: string = "non-coocked";
+
+  onChange(optionFromMenu) {
+  this.filterByCoocked = optionFromMenu;
+  }
+
+  toggleCooked(clickedRecipe: Recipe, setCoocked: boolean) {
+    clickedRecipe.coocked = setCoocked;
+  }
+
   constructor() { }
 
   ngOnInit() {
